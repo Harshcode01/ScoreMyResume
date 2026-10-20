@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.PORT || 4000;
+
 require("./conn");
 
 app.use(express.json());
@@ -24,7 +24,7 @@ const ResumeRoutes = require("./Routes/resume");
 app.use("/api/user", UserRoutes);
 app.use("/api/resume", ResumeRoutes);
 
-app.listen(PORT, () => console.log("our backend is running ", PORT));
+app.listen(() => console.log("our backend is running "));
 
 module.exports = app;
 
